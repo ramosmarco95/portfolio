@@ -1,0 +1,29 @@
+@import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&display=swap');
+body, html {
+    height: 100%;
+    color: var(--text-color);
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Source Code Pro', monospace, sans-serif;
+    
+}
+:root {
+    --text-color: #fff;
+    --primary-matrix-color: rgb(4, 134, 4);
+    --btn-color: rgba(0,255,0,0.8);
+    --btn-bg-color: var(--primary-matrix-color);
+
+
+    
+    --card-bg: rgba(255, 255, 255, 0.06);
+    --card-border: rgba(255, 255, 255, 0.16);
+    --card-shadow: 0 6px 24px rgba(0, 0, 0, 0.35);
+    --text-strong: #f3f4f6; /* near-white */
+    --text-dim: #cbd5e1; /* slate-300 */
+    --accent: var(--btn-bg-color, #7c3aed);
+}
+
+

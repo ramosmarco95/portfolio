@@ -1,0 +1,88 @@
+.about-section {
+    width: 100%;
+    margin: 0 auto 0 auto;
+    padding: 10px 10vw;
+    backdrop-filter: blur(6px);
+    background: rgba(0, 0, 0, 0.45);
+    display: flex;
+    flex-direction: column;
+}
+.about-card {
+    max-width: 800px;
+    margin: 50px auto 0 auto;
+    padding: 10px;
+    text-align: left;
+    border-radius: 10px;
+    background: rgba(255, 255, 255, 0.1);
+    box-shadow: 0 0 10px var(--btn-bg-color);
+    border: 1px solid rgba(255, 255, 255, 0.18);
+}
+
+.about-images {
+    width: 100%;
+    padding: 20px 0;
+    margin: 20px auto 50px auto;
+    display: flex;
+    flex: 1 1 250px;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+.about-image {
+    width: 100%;
+    max-width: 250px;/* scale down on phones */
+    min-height: 250px;
+    height: auto; 
+    object-fit: cover;
+    border: 2px solid var(--btn-bg-color);
+    box-shadow: 0 0 10px var(--btn-bg-color);
+}
+.image-caption {
+    text-align: center;
+    margin-top: 5px;
+    font-size: 0.9em;
+    color: var(--text-color);
+}
+/* Mobile devices (portrait and landscape) */
+@media only screen and (max-width: 767px) {
+    .about-section {
+        padding: 10px 5vw;
+    }
+    .about-card { display: none; }
+    .about-section::before {
+      content: "Get To Know Me!";
+      display: block;
+      text-align: center;
+      margin: 20px 0;
+      font-size: 1.2rem;
+      padding: 5px;
+      color: white;
+      border-radius: 10px;
+      background: rgba(255, 255, 255, 0.1);
+      box-shadow: 0 0 10px var(--btn-bg-color);
+      border: 1px solid rgba(255, 255, 255, 0.18);
+    }
+    .about-images {
+        flex-direction: column;
+        align-items: center;
+    }
+    .about-image {
+        width: 350px;
+        height: auto;
+    }
+    .image-container {
+        margin: 5px auto;;
+    }
+}
+/* tablet devices (portrait and landscape) */
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+   
+}
+/* laptop devices (portrait and landscape) */
+@media only screen and (min-width: 1025px) and (max-width: 1440px) {
+   
+}
+/* desktop devices (portrait and landscape) */
+@media only screen and (min-width: 1441px) {
+   
+}

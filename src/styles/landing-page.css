@@ -1,0 +1,53 @@
+section {
+  width: 100%;
+  height: 100vh;
+  margin: 0;
+  padding: 1.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  text-align: center;
+  overflow: hidden;
+}
+.glass-card {
+  width: 100%;
+  max-width: 600px;
+  text-align: center;
+  margin: 10px auto;
+  padding: 20px;
+  background: rgba(0, 0, 0, 0.45);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: 1rem;
+  color: #eaf7f0;
+  backdrop-filter: blur(6px);
+
+  /* Initial state */
+  opacity: 0;
+  transform: translateY(20px); /* optional: slight slide effect */
+  animation: fadeInUp 3s ease forwards;
+  animation-delay: 5s; /* wait 2s before starting */
+}
+h1 {
+  margin: 10px auto;
+}
+p {
+    margin: 10px auto;
+  line-height: 1.6;
+  font-size: 1.1rem;
+  color: #d0f0e8;
+}
+a {
+    margin: 10px auto;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

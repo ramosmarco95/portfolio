@@ -1,0 +1,40 @@
+
+
+.contact-container {
+    margin: 0;
+    padding: 20px;
+    width: 100%;
+    backdrop-filter: blur(6px);
+    background: rgba(0, 0, 0, 0.45);
+}
+
+.heading-contact-page {
+    text-align: center;
+    margin-bottom: 50px;
+}
+.contact-form-contact-page {
+    display: flex;
+    justify-content: space-around;
+    
+}
+
+/* Mobile devices (portrait and landscape) */
+@media only screen and (max-width: 767px) {
+ .contact-form-contact-page {
+    flex-direction: column;
+    align-items: center;
+    text-align: left;
+}
+}
+/* tablet devices (portrait and landscape) */
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+   
+}
+/* laptop devices (portrait and landscape) */
+@media only screen and (min-width: 1025px) and (max-width: 1440px) {
+   
+}
+/* desktop devices (portrait and landscape) */
+@media only screen and (min-width: 1441px) {
+   
+}

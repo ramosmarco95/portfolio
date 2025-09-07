@@ -1,0 +1,30 @@
+
+.resume-toolbar { display: flex; align-items: center; gap: 12px; margin: 0 auto;}
+.resume-meta { font-size: 1rem; opacity: .85; display:flex; gap:8px; align-items:center; flex-wrap:wrap; }
+.resume-meta .dot { width:4px; height:4px; border-radius:999px; background:currentColor; opacity:.5; display:inline-block; }
+
+/* Mobile devices (portrait and landscape) */
+@media only screen and (max-width: 767px) {
+ .resume-toolbar {
+    display: block;
+ }
+ .resume-btn {
+    width: 100%;
+ }
+}
+/* tablet devices (portrait and landscape) */
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+   .resume-btn {
+    width: 50%;
+    margin: 0 auto;
+    text-align: center;
+   }
+}
+/* laptop devices (portrait and landscape) */
+@media only screen and (min-width: 1025px) and (max-width: 1440px) {
+   
+}
+/* desktop devices (portrait and landscape) */
+@media only screen and (min-width: 1441px) {
+   
+}
