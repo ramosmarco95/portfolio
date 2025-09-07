@@ -47,6 +47,9 @@ jobs:
       #     # Create SPA fallback
       #     cp build/index.html build/404.html
 
+      - name: Configure Pages
+        uses: actions/configure-pages@v5
+
       - name: Upload Pages artifact
         uses: actions/upload-pages-artifact@v3
         with:
