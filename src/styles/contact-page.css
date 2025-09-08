@@ -11,11 +11,21 @@
 .heading-contact-page {
     text-align: center;
     margin-bottom: 50px;
+    
+}
+.heading-contact-page span {
+    color: #fff;
 }
 .contact-form-contact-page {
     display: flex;
     justify-content: space-around;
     
+}
+.form-container h2, 
+label, 
+.contact-info,
+.contact-list li{
+    color: #fff;
 }
 
 /* Mobile devices (portrait and landscape) */

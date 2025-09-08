@@ -21,6 +21,9 @@ footer {
     text-align: left;
     align-self: flex-start;
 }
+.quick-links-title {
+    color: #fff;
+}
 .links-list {
     list-style: none;
 }

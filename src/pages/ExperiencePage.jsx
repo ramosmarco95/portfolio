@@ -95,7 +95,7 @@ export default function ExperiencePage() {
 
         {/* Job 3 */}
         <AccordionItem title="Ground Service Agent — Alaska Airlines" nested>
-          <p className="job-duration">Jan 2022 – Present</p>
+          <p className="job-duration">April 2016 – April 2022 </p>
           <ul className="job-responsibilities">
             <li>Loaded and unloaded baggage, ensuring efficient processing and passenger satisfaction.</li>
             <li>Provided accurate flight information and assisted guests with baggage procedures.</li>

@@ -8,7 +8,7 @@ body, html {
     padding: 0;
     box-sizing: border-box;
     font-family: 'Source Code Pro', monospace, sans-serif;
-    
+    color: var(--text-color);
 }
 :root {
     --text-color: #fff;

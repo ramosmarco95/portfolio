@@ -9,7 +9,7 @@ mediaAlt: "A collection of static web pages built with HTML & CSS",
 githubUrl: "https://ramosmarco95.github.io/html-css-projects/",
 tech: ["HTML", "CSS"],
 },
-/*{
+{
 id: "proj-002",
 title: "Python Examples",
 description: "A collection of python coding projects.",
@@ -28,6 +28,6 @@ mediaSrc: "/public/project-img/c-sharp.png",
 mediaAlt: "A collection of static web pages built with HTML & CSS",
 githubUrl: "#",
 tech: ["C#", "C-sharp"],
-},*/
+},
 ];
 export default projects;
