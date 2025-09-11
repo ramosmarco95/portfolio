@@ -109,7 +109,8 @@ export default function ContactForm () {
                             id="name" 
                             name="name"
                             value={formData.name}
-                            onChange={handleChange} 
+                            onChange={handleChange}
+                            autoComplete="name" 
                             />
                              {formErrors.name && <span className="error-message">{formErrors.name}</span>}
                         </label>
@@ -120,6 +121,7 @@ export default function ContactForm () {
                             name="email"
                             value={formData.email}
                             onChange={handleChange} 
+                            autoComplete="email"
                             />
                              {formErrors.email && <span className="error-message">{formErrors.email}</span>}
                         </label>
@@ -129,7 +131,8 @@ export default function ContactForm () {
                             id="phone" 
                             name="phone"
                             value={formData.phone}
-                            onChange={handleChange} 
+                            onChange={handleChange}
+                            autoComplete="phone" 
                             />
                              {formErrors.phone && <span className="error-message">{formErrors.phone}</span>}
                         </label>
