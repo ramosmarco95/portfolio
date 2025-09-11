@@ -1,7 +1,7 @@
 import "../styles/contact-form.css"
 import { useState } from "react"
 
-
+const FORMSPREE_ENDPOINT = import.meta.env.VITE_FORMSPREE_ENDPOINT;
 
 export default function ContactForm () {
 
@@ -68,7 +68,7 @@ export default function ContactForm () {
     }
 
     
-    const FORMSPREE_ENDPOINT = import.meta.env.VITE_FORMSPREE_ENDPOINT;
+    
 
     async function handleSubmit(e) {
     e.preventDefault();
