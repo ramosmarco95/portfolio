@@ -1,6 +1,6 @@
 import '../styles/resume-download.css'
 import { useMemo } from "react";
-import resumePdf from "/public/resume/swdv-resume.pdf"; 
+import resumePdf from "/public/resume/swdv-resume-09-27-2025.pdf"; 
 
 
 export default function ResumeDownload({
