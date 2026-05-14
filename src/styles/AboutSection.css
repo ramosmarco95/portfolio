@@ -1,0 +1,229 @@
+/* ============================================================
+   AboutSection.css
+   Two-column layout: image left, text right
+   Scroll-triggered reveal animations
+   ============================================================ */
+
+/* ---------- Section shell ---------- */
+.about-section {
+  min-height: 100vh;
+  padding: 120px 24px;
+  scroll-margin-top: 90px;
+  background: var(--color-ash-white, #fafafa);
+  display: flex;
+  align-items: center;
+}
+
+/* ---------- Inner grid ---------- */
+.about-inner {
+  max-width: 1160px;
+  margin: 0 auto;
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 80px;
+  align-items: center;
+}
+
+/* ============================================================
+   IMAGE COLUMN
+   ============================================================ */
+.about-image-wrap {
+  position: relative;
+
+  /* Slide in from the left on scroll */
+  opacity: 0;
+  transform: translateX(-48px);
+  transition: opacity 0.75s cubic-bezier(0.22, 1, 0.36, 1),
+              transform 0.75s cubic-bezier(0.22, 1, 0.36, 1);
+  transition-delay: 0.1s;
+}
+
+.about-image-wrap.in-view {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+/* Decorative offset block behind the image */
+.about-image-accent {
+  position: absolute;
+  inset: 0;
+  border-radius: 20px;
+  background: linear-gradient(135deg, #b2f0e8 0%, #c3b1e1 100%);
+  transform: translate(14px, 14px);
+  z-index: 0;
+}
+
+.about-image-frame {
+  position: relative;
+  z-index: 1;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.12);
+}
+
+.about-photo {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  border-radius: 20px;
+
+  /* Subtle scale-in on load */
+  transition: transform 0.6s ease;
+}
+
+.about-image-frame:hover .about-photo {
+  transform: scale(1.025);
+}
+
+/* ============================================================
+   TEXT COLUMN
+   ============================================================ */
+.about-content {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+
+/* ---- Heading block ---- */
+.about-text-block {
+  opacity: 0;
+  transform: translateY(32px);
+  transition: opacity 0.7s cubic-bezier(0.22, 1, 0.36, 1),
+              transform 0.7s cubic-bezier(0.22, 1, 0.36, 1);
+  transition-delay: 0.25s;
+}
+
+.about-text-block.in-view {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+
+
+.about-heading {
+  font-family: var(--font-dm-sans, "DM Sans", sans-serif);
+  font-size: clamp(32px, 4vw, 52px);
+  font-weight: 700;
+  line-height: 1.1;
+  letter-spacing: -1.2px;
+  color: var(--color-carbon-black, #09090b);
+  margin: 0;
+}
+
+/* ---- Copy block ---- */
+.about-copy {
+  opacity: 0;
+  transform: translateY(32px);
+  transition: opacity 0.7s cubic-bezier(0.22, 1, 0.36, 1),
+              transform 0.7s cubic-bezier(0.22, 1, 0.36, 1);
+  transition-delay: 0.42s;
+}
+
+.about-copy.in-view {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.about-copy p {
+  font-size: 17px;
+  line-height: 1.75;
+  color: var(--color-steel-gray, #71717b);
+  margin-bottom: 18px;
+}
+
+.about-copy p:last-of-type {
+  margin-bottom: 28px;
+}
+
+/* ---- Skill tags ---- */
+.about-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.tag {
+  display: inline-block;
+  padding: 6px 16px;
+  border-radius: 100px;
+  font-size: 13px;
+  font-weight: 500;
+  letter-spacing: 0.02em;
+  background: transparent;
+  border: 1.5px solid var(--color-border, #e4e4e7);
+  color: var(--color-carbon-black, #09090b);
+  transition: background 0.2s ease, border-color 0.2s ease, color 0.2s ease;
+}
+
+.tag:hover {
+  background: var(--color-carbon-black, #09090b);
+  border-color: var(--color-carbon-black, #09090b);
+  color: #fff;
+  cursor: default;
+}
+
+/* ============================================================
+   RESPONSIVE
+   ============================================================ */
+
+/* Tablet — stack image above text */
+@media (max-width: 900px) {
+  .about-section {
+    padding: 96px 24px;
+  }
+
+  .about-inner {
+    grid-template-columns: 1fr;
+    gap: 48px;
+  }
+
+  /* On mobile, image slides down instead of left */
+  .about-image-wrap {
+    transform: translateY(-32px);
+    max-width: 480px;
+    margin: 0 auto;
+    width: 100%;
+  }
+
+  .about-image-wrap.in-view {
+    transform: translateY(0);
+  }
+
+  .about-heading {
+    font-size: clamp(30px, 8vw, 44px);
+  }
+
+  .about-copy p {
+    font-size: 16px;
+  }
+}
+
+/* Mobile */
+@media (max-width: 480px) {
+  .about-section {
+    padding: 80px 20px;
+  }
+
+  .about-copy p {
+    text-align: left;
+  }
+
+  .about-inner {
+    gap: 40px;
+  }
+
+  .about-image-accent {
+    transform: translate(10px, 10px);
+  }
+
+  .about-tags {
+    gap: 8px;
+  }
+
+  .tag {
+    font-size: 12px;
+    padding: 5px 13px;
+  }
+}

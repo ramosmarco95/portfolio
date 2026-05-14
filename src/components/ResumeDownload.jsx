@@ -1,12 +1,12 @@
 import '../styles/resume-download.css'
 import { useMemo } from "react";
-import resumePdf from "/public/resume/swdv-resume-09-27-2025.pdf"; 
+import resumePdf from "/public/resume/resume-2-24-2026.pdf"; 
 
 
 export default function ResumeDownload({
   label = "Download Resume (PDF)",
   version = "Designed",
-  updated = "Sep 2025",
+  updated = "Feb 2026",
   size = "~180 KB"
 }) {
   const fileName = useMemo(() => `Marco_Ramos_Resume_${version}.pdf`, [version]);
@@ -14,7 +14,7 @@ export default function ResumeDownload({
   return (
     <div className="resume-toolbar" role="group" aria-label="Resume actions">
       <a
-        className="custom-btn resume-btn"
+        className="btn btn-primary"
         href={resumePdf}
         download={fileName}
         target="_blank"
@@ -24,9 +24,7 @@ export default function ResumeDownload({
      {label}
       </a>
       <div className="resume-meta">
-        <span className="dot" /> <strong>Version:</strong> {version}
         <span className="dot" /> <strong>Updated:</strong> {updated}
-        <span className="dot" /> <strong>Size:</strong> {size}
       </div>
     </div>
   );
