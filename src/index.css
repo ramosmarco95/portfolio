@@ -1,29 +1,178 @@
-@import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&display=swap');
-body, html {
-    height: 100%;
-    color: var(--text-color);
-}
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Source Code Pro', monospace, sans-serif;
-    color: var(--text-color);
-}
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=Inter:wght@400;500;600&display=swap");
+
 :root {
-    --text-color: #fff;
-    --primary-matrix-color: rgb(4, 134, 4);
-    --btn-color: rgba(0,255,0,0.8);
-    --btn-bg-color: var(--primary-matrix-color);
+  /* Colors */
+  --color-cloud-white: #ffffff;
+  --color-ash-white: #fafafa;
+  --color-slate-gray: #e4e4e7;
+  --color-dark-graphite: #f4f4f5;
+  --color-carbon-black: #09090b;
+  --color-charcoal-black: #18181b;
+  --color-steel-gray: #71717b;
+  --color-cadet-gray: #9f9fa9;
+  --color-lottie-teal: #019d91;
+  --color-vivid-aqua: #00ddb3;
+  --color-sunshine-yellow: #f0b100;
+  --color-electric-blue: #3a86ff;
+  --color-jolly-green: #94d19f;
+  --color-coral-pink: #ff8eed;
 
+  /* Fonts */
+  --font-dm-sans: "DM Sans", sans-serif;
+  --font-inter: "Inter", sans-serif;
 
-    
-    --card-bg: rgba(255, 255, 255, 0.06);
-    --card-border: rgba(255, 255, 255, 0.16);
-    --card-shadow: 0 6px 24px rgba(0, 0, 0, 0.35);
-    --text-strong: #f3f4f6; /* near-white */
-    --text-dim: #cbd5e1; /* slate-300 */
-    --accent: var(--btn-bg-color, #7c3aed);
+  /* Layout */
+  --page-max-width: 1200px;
+
+  /* Radius */
+  --radius-forms: 8px;
+  --radius-buttons: 12px;
+  --radius-cards: 16px;
+  --radius-thumbnails: 24px;
+
+  /* Shadow */
+  --shadow-subtle: rgba(0, 0, 0, 0.05) 0px 1px 2px 0px;
 }
 
+/* Reset */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
 
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-inter);
+  background: var(--color-cloud-white);
+  color: var(--color-carbon-black);
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button,
+input,
+textarea {
+  font-family: inherit;
+}
+
+/* Buttons */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 44px;
+  padding: 10px 24px;
+  border-radius: var(--radius-buttons);
+  font-size: 15px;
+  font-weight: 600;
+  border: 1px solid transparent;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.btn-primary {
+  background: var(--color-lottie-teal);
+  color: var(--color-cloud-white);
+  box-shadow: var(--shadow-subtle);
+}
+
+.btn-primary:hover {
+  background: #01887e;
+  transform: translateY(-2px);
+}
+
+.btn-outline {
+  background: var(--color-cloud-white);
+  color: var(--color-carbon-black);
+  border-color: var(--color-slate-gray);
+  box-shadow: var(--shadow-subtle);
+}
+
+.btn-outline:hover {
+  background: var(--color-dark-graphite);
+  transform: translateY(-2px);
+}
+
+/* Global section layout */
+.section {
+  min-height: 100vh;
+  padding: 96px 24px;
+  scroll-margin-top: 80px;
+}
+
+.section-container {
+  max-width: var(--page-max-width);
+  margin: 0 auto;
+}
+
+.section-heading {
+  max-width: 720px;
+  margin-bottom: 48px;
+}
+
+.section-title,
+.section-heading h2 {
+  font-family: var(--font-dm-sans);
+  font-size: clamp(36px, 5vw, 56px);
+  line-height: 1.1;
+  letter-spacing: -1.44px;
+  margin-bottom: 16px;
+}
+
+.section-text,
+.section-copy {
+  color: var(--color-steel-gray);
+  font-size: 18px;
+  line-height: 1.7;
+}
+
+/* Small teal label */
+.eyebrow {
+  display: inline-flex;
+  align-items: center;
+  width: fit-content;
+  color: var(--color-accent, #6c63ff);
+  background: rgba(1, 157, 145, 0.08);
+  border: 1px solid rgba(1, 157, 145, 0.16);
+  border-radius: 999px;
+  padding: 6px 14px;
+  font-family: var(--font-dm-sans, "DM Sans", sans-serif);
+  font-size: 13px;
+  font-weight: 600;
+  text-transform: uppercase;
+  margin-bottom: 16px;
+}
+
+/*.about-eyebrow {
+  font-family: var(--font-dm-sans, "DM Sans", sans-serif);
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--color-accent, #6c63ff);
+  margin-bottom: 14px;
+}*/
+
+/* Global responsive section spacing */
+@media (max-width: 900px) {
+  .section {
+    padding: 80px 20px;
+  }
+
+  .section-heading {
+    margin-bottom: 32px;
+  }
+
+  .section-text,
+  .section-heading p,
+  .section-copy {
+    font-size: 16px;
+  }
+}

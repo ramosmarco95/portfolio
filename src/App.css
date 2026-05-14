@@ -1,18 +1,8 @@
-.custom-btn {
-    color: #eaf7f0;
-    border: 2px solid var(--btn-bg-color);
-    background: var(--btn-bg-color);
-    display: inline-block;
-    margin-top: 10px;
-    padding: 0.5em 1.5em;
-    font-size: 1.25rem;
-    text-transform: uppercase;
-    border-radius: 0.5em;
-    cursor: pointer;
-    text-decoration: none;
-}
-.custom-btn:hover {
-    opacity: 1;
-    transform: translateY(-3px);
-    background-color: rgb(114, 202, 41);
+/* App */
+.portfolio-app {
+  min-height: 100vh;
+  background:
+    radial-gradient(circle at top left, rgba(0, 221, 179, 0.12), transparent 30%),
+    radial-gradient(circle at top right, rgba(255, 142, 237, 0.12), transparent 25%),
+    var(--color-cloud-white);
 }
