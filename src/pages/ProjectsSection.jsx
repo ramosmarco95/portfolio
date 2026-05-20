@@ -7,17 +7,17 @@ import jsImg from "../assets/javascript-project-card-img.png";
 
 const projects = [
   {
-    id: 1,
-    image: jsImg,
-    imageAlt: "JavaScript project illustration",
-    accent: "project-yellow",
-    tag: "JavaScript",
-    title: "JavaScript Examples",
-    description:
-      "A collection of JavaScript projects showcasing various concepts, libraries, and frameworks to demonstrate understanding in JavaScript development.",
-    href: "https://ramosmarco95.github.io/javascript-projects/",
-    tech: ["React", "JavaScript", "HTML", "CSS"],
-  },
+  id: 1,
+  image: jsImg,
+  imageAlt: "Shayna's Farm Apothecary e-commerce store",
+  accent: "project-green",
+  title: "Shayna's Farm Apothecary",
+  tag: "Full Stack",
+  description:
+    "A full-stack e-commerce store for a small farm apothecary brand. Built with a React frontend, Node.js REST API, and MongoDB database. Features product browsing, a persistent cart, and an admin panel for inventory management.",
+  href: "https://shaynas-farm-apothecary.vercel.app/",
+  tech: ["React", "Node.js", "Express", "MongoDB", "Tailwind CSS"],
+},
   {
     id: 2,
     image: pythonImg,
