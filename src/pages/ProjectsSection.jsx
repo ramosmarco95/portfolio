@@ -24,11 +24,11 @@ const projects = [
     imageAlt: "Python project illustration",
     accent: "project-green",
     tag: "Python",
-    title: "Coming Soon",
+    title: "Baseball Team Manager",
     description:
-      "A collection of Python projects showcasing various concepts, libraries, and frameworks to demonstrate understanding in Python development.",
-    href: "#",
-    tech: ["Python", "React", "Bootstrap", "MongoDB"],
+      "A command-line Python application for managing a baseball team's starting lineup. Built as a progressive learning project in my SWDV 210 class Introduction to Server-Side Programming, evolving from a simple batting average calculator into a fully structured application with OOP, SQLite persistence, and a three-tier architecture.",
+    href: "https://github.com/ramosmarco95/baseball-team-manager",
+    tech: ["Python 3.x", "SQLite3", "OOP", "Three-Tier Architecture"],
   },
   {
     id: 3,
